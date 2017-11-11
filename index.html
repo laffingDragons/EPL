@@ -1,16 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
+
+<html lang="en" ng-app="myEpl">
 <head>
 	<meta charset="utf-8">
-	<title>Easy Profile Green - templatemo</title>
+	<title>EPL</title>
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="keywords" content="">
 	<meta name="description" content="">
-<!-- 
-Easy Profile Template
-http://www.templatemo.com/tm-467-easy-profile
--->
+
 	<!-- stylesheet css -->
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/font-awesome.min.css">
@@ -18,22 +15,23 @@ http://www.templatemo.com/tm-467-easy-profile
 </head>
 <body data-spy="scroll" data-target=".navbar-collapse">
 
-<!-- preloader section -->
+<!-- preloader section 
 <div class="preloader">
 	<div class="sk-spinner sk-spinner-wordpress">
        <span class="sk-inner-circle"></span>
      </div>
 </div>
-
+-->
 <!-- header section -->
 <header>
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12 col-sm-12">
-				<img src="images/tm-easy-profile.jpg" class="img-responsive img-circle tm-border" alt="templatemo easy profile">
+				<img src="images/tm-easy-profile.png" class="img-responsive img-circle tm-border" alt="templatemo easy profile">
 				<hr>
-				<h1 class="tm-title bold shadow">Hi, I am Julia</h1>
-				<h1 class="white bold shadow">Creative Director</h1>
+				<h1 class="tm-title bold shadow">Welcome</h1>
+				<h1 class="white bold shadow">English Premier League</h1>
+                <a href="#/">Home</a>
 			</div>
 		</div>
 	</div>
@@ -115,21 +113,18 @@ http://www.templatemo.com/tm-467-easy-profile
 					<p><i class="fa fa-phone"></i> 010-020-0890</p>
 					<p><i class="fa fa-envelope"></i> easy@company.com</p>
 					<p><i class="fa fa-globe"></i> www.company.com</p>
+                
+                <div ng-view>
+                </div>
 			</div>
 		</div>
-		<div class="col-md-8 col-sm-12">
-			<div class="experience">
-				<h2 class="white">Experiences</h2>
-					<div class="experience-content">
-						<h4 class="experience-title accent">Website Development</h4>
-						<h5>New Media Company</h5><span></span>
-						<h5>2035 January - 2036 April</h5>
-						<p class="education-description">Cras porta tincidunt sem, in sollicitudin lorem efficitur ut. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet.</p>
-					</div>
-			</div>
-		</div>
+		
 	</div>
 </section>
+    <!----main content--->
+    <div class="container">
+    
+    </div>
 
 <!-- footer section -->
 <footer>
@@ -155,6 +150,10 @@ http://www.templatemo.com/tm-467-easy-profile
 <script src="js/bootstrap.min.js"></script>	
 <script src="js/jquery.backstretch.min.js"></script>
 <script src="js/custom.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular-route.min.js"></script>
 
+<script src="angular/app.js"></script>
+    
 </body>
 </html>
