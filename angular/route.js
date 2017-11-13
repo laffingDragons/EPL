@@ -8,11 +8,6 @@ myApp.config(['$routeProvider', function($routeProvider){
             // what is the alias of that controller.
         	controllerAs 	: 'epl'
         })
-      .otherwise(
-            {
-                //redirectTo:'/'
-                template   : '<h1>404 page not found</h1>'
-            }
-        );
+      
     
 }]);
