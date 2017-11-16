@@ -1,20 +1,19 @@
-<div class = "container">
-<div class="col-md-8 col-sm-12" >
-			<div class="experience">
-                <div ng-controller="myController as epl">
-      
-      <input type='text' ng-model="searchText.team1.name" placeholder="Search Team1" >
-       
+
 <div ng-repeat ="item in epl.rounds">
-  <div ng-repeat ="data in item.matches | filter:searchText">
-   <div class="well">
-      {{ data.date  }}<br/>
-      {{ data.team1.name}} - {{ data.score1 }} <h4>VS</h4> {{ data.team2.name}} - {{ data.score2 }}<br/>
-       
-      </div>
-</div>
-</div>
-  </div>
+   <div ng-repeat ="data in item.matches">
+	<div class="row">
+		<div class="col-md-6 col-sm-12">
+			<div class="about">
+              <h5 class="accent">{{ data.date  }}</h5>
+				<h4>{{ data.team1.name}}</h4>
 			</div>
 		</div>
-    </div>
+		<a href='#' ><div class="col-md-6 col-sm-12">
+			<div class="skills">
+                <h5 class="accent">{{ item.name}}</h5>
+                <h4 class="white">{{ data.team2.name}}</h4>
+         </div>
+        </div> </a>
+	   </div><br/><hr><br/><br/><br/>
+      </div>
+	</div>
