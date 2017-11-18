@@ -1,19 +1,56 @@
 
-<div ng-repeat ="item in epl.rounds">
-   <div ng-repeat ="data in item.matches">
+
+<!--UI for 2015-16 match--->
+<div class="container">
+<div ng-repeat ="data in epl.rounds15">
+   <div ng-repeat ="teams in data.matches">
+       <a ng-href="#/match/{{ teams.team1.code }}/{{ teams.team2.code }}/{{ teams.date }}">
 	<div class="row">
 		<div class="col-md-6 col-sm-12">
-			<div class="about">
-              <h5 class="accent">{{ data.date  }}</h5>
-				<h4>{{ data.team1.name}}</h4>
-			</div>
+			  <div class="about">
+              <h5 class="accent">{{ teams.date  }}</h5>
+				<h4>{{ teams.team1.name}}</h4>
+                 </div>
 		</div>
-		<a href='#' ><div class="col-md-6 col-sm-12">
+		<div class="col-md-6 col-sm-12">
 			<div class="skills">
-                <h5 class="accent">{{ item.name}}</h5>
-                <h4 class="white">{{ data.team2.name}}</h4>
+                <h5 class="accent">{{ data.name}}</h5>
+                 <h4 class="white">{{ teams.team2.name}}</h4>
          </div>
-        </div> </a>
-	   </div><br/><hr><br/><br/><br/>
+        </div> 
+       </div></a><br/><hr><br/><br/><br/>
       </div>
 	</div>
+    </div>
+<!--Divider-->
+<div class="container-fluid">
+        <div class="row">
+         <div style="background-color:#442260 " id="2016">
+         <img class="img-responsive center-block" src="images/logo/logo.jpg" align="middle">
+             <h2 class="text-center white">2016-17</h2> 
+            </div>   
+    </div>
+
+</div>
+<!--UI for 2016-17 match--->
+<div class="container">
+<div ng-repeat ="data in epl.rounds16">
+   <div ng-repeat ="teams in data.matches">
+       <a ng-href="#/match/{{ teams.team1.code }}/{{ teams.team2.code }}/{{ teams.date }}">
+	<div class="row">
+		<div class="col-md-6 col-sm-12">
+			  <div class="about">
+              <h5 class="accent">{{ teams.date  }}</h5>
+				<h4>{{ teams.team1.name}}</h4>
+                 </div>
+		</div>
+		<div class="col-md-6 col-sm-12">
+			<div class="skills">
+                <h5 class="accent">{{ data.name}}</h5>
+                 <h4 class="white">{{ teams.team2.name}}</h4>
+         </div>
+        </div> 
+       </div></a><br/><hr><br/><br/><br/>
+      </div>
+	</div>
+</div>

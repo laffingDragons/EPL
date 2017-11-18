@@ -137,7 +137,7 @@ header {
   min-height: 400px;
   overflow: hidden;
   position: relative;
-  padding-top: 160px;
+  padding-top: 100px;
   padding-bottom: 140px;
 }
 header img {
@@ -178,7 +178,7 @@ header hr {
 
 /* education section */
 .education {
-  background: #7ac143;
+  background: #FF025D;
   color: #f5f5f5;
 }
 .education .education-content {
@@ -239,6 +239,14 @@ footer {
   text-align: center;
   padding-bottom: 20px;
 }
+#2015{
+    color: #fff; 
+    background-color: #442260;
+}
+#2016{
+    color: #fff; 
+    background-color: #442260;
+}
 
 /* social icon section */
 .social-icons {
@@ -251,7 +259,7 @@ footer {
 }
 .social-icons li a {
   background: #7ac143;
-  border-radius: 50%;
+  border-radius: 20%;
   color: #fff;
   text-decoration: none;
   font-size: 18px;
@@ -265,7 +273,7 @@ footer {
   top: 10px;
 }
 .social-icons li a:hover {
-  background: #202020;
+  background: #442260;
   color: #fff;
 }
 
