@@ -1,12 +1,6 @@
 <div class="row">
-				<div class="col-xs-4 col-md-4">
-				
-					<img ng-src = "images/logo/{{ mD.code1}}.png" class="img-responsive" style="height:auto;width:440px">
-						<h4 class="text-center">{{ mD.team1 }}</h4>
-						<h5 class="text-center"> Goals : {{ mD.score1 }}</h5>
-					</div>
-						
-					<div class="col-xs-4 col-md-4 text-center">
+    
+    <div class="col-xs-12 col-md-12 text-center">
 						<h3> {{ mD.matchDay }}</h3>
 						
 						<h3> {{ mD.date }}</h3>
@@ -15,7 +9,19 @@
 						
 						<hr>
 					</div>
-					<div class="col-xs-4 col-md-4">
+    
+				<div class="col-xs-5 col-md-5">
+				
+					<img ng-src = "images/logo/{{ mD.code1}}.png" class="img-responsive" style="height:auto;width:440px">
+						<h4 class="text-center">{{ mD.team1 }}</h4>
+						<h5 class="text-center"> Goals : {{ mD.score1 }}</h5>
+					</div>
+    
+						<div class="col-xs-2 col-md-5">
+                            <h1 class="text-center center-block">v/s</h1>
+                       </div>
+					
+					<div class="col-xs-5 col-md-5">
 
 					<img ng-src = "images/logo/{{ mD.code2}}.png" class="img-responsive" style="height:auto;width:440px">
 						<h4 class="text-center">{{ mD.team2 }}</h4>
@@ -29,6 +35,6 @@
 						<h2 class="text-center">{{ mD.winner }}</h2>
 					</div>
 					<div class="col-xs-12 text-center" style="margin-top: 15px;">
-						<button type="button" class="line-btn big green" ng-click="mD.navigateBack()">Back to table</button>
+						<button type="button" class="line-btn big green" ng-click="mD.goBack()">Back to table</button>
 					</div>
 				</div>
