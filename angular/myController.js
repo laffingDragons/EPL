@@ -5,6 +5,8 @@
   var main = this;
     this.name15;
     this.name16;
+    this.teamCode15;
+    this.teamCode16;
     this.rounds15 = [];
     this.rounds16 = [];
     this.matches = [];
