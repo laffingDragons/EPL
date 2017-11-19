@@ -17,6 +17,7 @@ myApp.config(['$routeProvider', function($routeProvider){
         	controllerAs 	: 'mD'
         })
     
+    
 }]);
 
 myApp.config(['$locationProvider', function($locationProvider) {
