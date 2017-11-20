@@ -30,7 +30,9 @@
 
 				
 					<div class="col-xs-12"> 
-						<h2 class="text-center">{{ mD.winner }}</h2>
+						 <h1 class="text-center" ng-if="mD.score1 > mD.score2">{{mD.team1}} Won</h1><br/>
+                        <h1 class="text-center" ng-if="mD.score1 < mD.score2">{{mD.team2}} Won</h1><br/>
+                        <h1 class="text-center" ng-if="mD.score1 == mD.score2">Match Draw</h1><br/>
 					</div>
 					<div class="col-xs-12 text-center" style="margin-top: 15px;">
 						<button type="button" class="line-btn big green" ng-click="mD.goBack()">Back to table</button>

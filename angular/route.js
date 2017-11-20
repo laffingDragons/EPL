@@ -16,7 +16,14 @@ myApp.config(['$routeProvider', function($routeProvider){
             // what is the alias of that controller.
         	controllerAs 	: 'mD'
         })
-    
+    .when('/teams',{
+            // location of the template
+        	templateUrl		: 'views/teams-view.html',
+        	// Which controller it should use 
+            controller 		: 'teams',
+            // what is the alias of that controller.
+        	controllerAs 	: 'team15'
+        })
     
 }]);
 

@@ -43,17 +43,7 @@ myApp.controller("teamStats",['$http','$location','$routeParams',function($http,
                     
                     
                     
-                if (main.score1 > main.score2){
-                    main.winner = ""+main.team1+" Won by " ; 
-                  }
-                 else if (main.score1 < main.score2){
-                 main.winner = ""+main.team2+" Won by " ;
-                 }
-                       
-                     else {
-                         main.winner = "Match Drawn" ;
-
-                        }     
+                 
                 
               }
             }
