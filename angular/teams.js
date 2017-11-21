@@ -5,7 +5,7 @@ myApp.controller("teams",['$http','$location','$routeParams',function($http,$loc
     
     // var for data
     this.teamArray=[];
-    
+    this.team=[];
     
     this.team15=function(data){
         
@@ -15,20 +15,9 @@ myApp.controller("teams",['$http','$location','$routeParams',function($http,$loc
         for(var x in main.rounds){
             for(var y in main.rounds[x].matches){
                
-                main.team = [main.rounds[x].matches[y].team1.name];
-                main.teamArray= _.concat(main.team)
-                console.log(main.teamArray);
+                main.teamArray = [main.rounds[x].matches[y].team1.name];
                 
-           //main.teamArray1= _.chunk(main.teamArray, 5)
-           // main.teamName=_.uniqWith(main.teamArray, _.isEqual)  ;
-               // console.log(main.teamName)
-           // main.team=(main.teamArray, name);
-                //console.log(main.team)
-             /*  function onlyUnique(value, index, self) { 
-    return self.indexOf(value) === index;
-}
-                main.teamArray= .filter( onlyUnique );
-                console.log(main.teamArray)  */
+               
             }
         }
     }
@@ -53,4 +42,22 @@ myApp.controller("teams",['$http','$location','$routeParams',function($http,$loc
             }
 
             this.url1() //call for first url
+    
+    
+       this.url2 = function(){
+             $http({
+                method:"GET",
+                url:main.baseUrl2
+              }).then(function successCallback(response){
+
+                main.team15(response.data);
+                //console.log(main.teamArray);
+              },
+                      function errorCallback(reason){
+              alert("Some error occurred. Check the console.");
+              })
+            }
+
+            this.url2() //call for first url
 }])
+
