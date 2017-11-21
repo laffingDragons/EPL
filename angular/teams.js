@@ -5,22 +5,26 @@ myApp.controller("teams",['$http','$location','$routeParams',function($http,$loc
     
     // var for data
     this.teamArray=[];
-    this.dup=[];
-    this.final=[];
+    
     
     this.team15=function(data){
         
         main.rounds=data.rounds;
         
+        
         for(var x in main.rounds){
             for(var y in main.rounds[x].matches){
                
-            main.teamArray= _.map(main.rounds[x].matches[y].team1.name);
-                main.dup= main.teamArray.join("");
-                main.final= _.uniqBy(main.dup)
-                console.log(main.final);
-            
-           /*     function onlyUnique(value, index, self) { 
+                main.team = [main.rounds[x].matches[y].team1.name];
+                main.teamArray= _.concat(main.team)
+                console.log(main.teamArray);
+                
+           //main.teamArray1= _.chunk(main.teamArray, 5)
+           // main.teamName=_.uniqWith(main.teamArray, _.isEqual)  ;
+               // console.log(main.teamName)
+           // main.team=(main.teamArray, name);
+                //console.log(main.team)
+             /*  function onlyUnique(value, index, self) { 
     return self.indexOf(value) === index;
 }
                 main.teamArray= .filter( onlyUnique );
@@ -41,7 +45,7 @@ myApp.controller("teams",['$http','$location','$routeParams',function($http,$loc
               }).then(function successCallback(response){
 
                 main.team15(response.data);
-                console.log(main.teamArray);
+                //console.log(main.teamArray);
               },
                       function errorCallback(reason){
               alert("Some error occurred. Check the console.");

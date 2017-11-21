@@ -41,10 +41,6 @@ myApp.controller("teamStats",['$http','$location','$routeParams',function($http,
                 main.code2 = main.rounds[x].matches[y].team2.code;
                 main.date = main.rounds[x].matches[y].date;
                     
-                    
-                    
-                 
-                
               }
             }
         }
