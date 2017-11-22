@@ -151,6 +151,16 @@ header hr {
   border-color: #7ac143;
   width: 100px;
 }
+/* affix nav*/
+.affix {
+      top: 0;
+      width: 100%;
+      z-index: 9999 !important;
+  }
+
+  .affix + .container-fluid {
+      padding-top: 70px;
+  }
 
 /* about section */
 .about {
