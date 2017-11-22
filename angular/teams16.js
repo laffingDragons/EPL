@@ -1,4 +1,4 @@
-myApp.controller("teams",['$http','$location','$routeParams',function($http,$location,$routeParams){
+myApp.controller("teams16",['$http','$location','$routeParams',function($http,$location,$routeParams){
     
     //creating context
     var main=this;
@@ -88,8 +88,8 @@ myApp.controller("teams",['$http','$location','$routeParams',function($http,$loc
     }
     
      //intailizing URL's
-    this.baseUrl1 = "https://raw.githubusercontent.com/openfootball/football.json/master/2015-16/en.1.json";
     
+    this.baseUrl1 = "https://raw.githubusercontent.com/openfootball/football.json/master/2016-17/en.1.json";
     
     //http function for getting data
              this.url1 = function(){

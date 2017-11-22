@@ -19,11 +19,31 @@ myApp.config(['$routeProvider', function($routeProvider){
     .when('/teams',{
             // location of the template
         	templateUrl		: 'views/teams-view.html',
-        	// Which controller it should use 
+        	
+        })
+     .when('/teams16',{
+            // location of the template
+        	templateUrl		: 'views/team16-view.html',
+        	
+        })
+    .when('/someurl/:code1',{
+            templateUrl : 'views/teamStats-view.html',
+            // Which controller it should use 
             controller 		: 'teams',
             // what is the alias of that controller.
         	controllerAs 	: 'team15'
-        })
+       })
+    .when('/someurl/:code1',{
+            templateUrl : 'views/teamStats16-view.html',
+            // Which controller it should use 
+            controller 		: 'teams16',
+            // what is the alias of that controller.
+        	controllerAs 	: 'team16'
+       })
+    
+    .otherwise({
+    redirectTo: '/'
+  })
     
 }]);
 
