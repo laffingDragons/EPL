@@ -26,14 +26,14 @@ myApp.config(['$routeProvider', function($routeProvider){
         	templateUrl		: 'views/team16-view.html',
         	
         })
-    .when('/someurl/:code1',{
+    .when('/1516/:a',{
             templateUrl : 'views/teamStats-view.html',
             // Which controller it should use 
             controller 		: 'teams',
             // what is the alias of that controller.
         	controllerAs 	: 'team15'
        })
-    .when('/someurl/:code1',{
+    .when('/1617/:b',{
             templateUrl : 'views/teamStats16-view.html',
             // Which controller it should use 
             controller 		: 'teams16',

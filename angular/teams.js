@@ -4,7 +4,7 @@ myApp.controller("teams",['$http','$location','$routeParams',function($http,$loc
     var main=this;
     
     // var for data
-     this.code1 = $routeParams.code1 ;
+     this.code1 = $routeParams.a ;
     
     this.rounds=[];
     
