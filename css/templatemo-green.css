@@ -278,7 +278,8 @@ footer {
 }
 .social-icons li a {
   background: #7ac143;
-  border-radius: 20%;
+  padding: 2px;
+  border-radius: 15%;
   color: #fff;
   text-decoration: none;
   font-size: 18px;
