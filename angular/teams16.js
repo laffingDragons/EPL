@@ -17,70 +17,63 @@ myApp.controller("teams16",['$http','$location','$routeParams',function($http,$l
     var wins=0;
     var loss=0;
     var draw=0;
+    var score=0;
     
     this.team15=function(data){
         
         main.rounds=data.rounds;
         
         
-        for(var x in main.rounds){
-            for(var y in main.rounds[x].matches){
-               
-               
-        if (main.rounds[y].matches[x].team1.code === main.code1){
-                matchesPlayed++; 
-             main.name1 = main.rounds[y].matches[x].team1.name;
-              if(main.rounds[y].matches[x].score1 > main.rounds[y].matches[x].score2){
-                        wins ++ ; 
-                       
-                      }
+       for (var a in main.rounds) {
 
-                      else if(main.rounds[y].matches[x].score1 < main.rounds[y].matches[x].score2){
-                        loss ++;
-                       
-                      }
+			for (var b in main.rounds[a].matches) {
 
-                      else if(main.rounds[y].matches[x].score1 == main.rounds[y].matches[x].score2){
-                        draw ++;
-                       
-                      }
-            
-        
-       
-        
-        }
-           
-           else if(main.rounds[y].matches[x].team2.code == main.code1){
+				// loop with routeParams ID
 
-                       main.name1 = main.rounds[y].matches[x].team2.name ;
-                      
-                       matchesPlayed++ ;
+				if (main.rounds[a].matches[b].team1.code === main.code1) {
+					matchesPlayed++;
+					score += main.rounds[a].matches[b].score1;
+					main.name1 = main.rounds[a].matches[b].team1.name;
+					if (main.rounds[a].matches[b].score1 > main.rounds[a].matches[b].score2) {
+						wins++;
 
-                    
 
-                     
-                      
-                       if(main.rounds[y].matches[x].score1 > main.rounds[y].matches[x].score2){
-                        loss++ ; 
-                        
-                      }
+					} else if (main.rounds[a].matches[b].score1 < main.rounds[a].matches[b].score2) {
+						loss++;
 
-                      else if(main.rounds[y].matches[x].score1 < main.rounds[y].matches[x].score2){
-                        wins++;
-                        
-                      }
 
-                      else if(main.rounds[y].matches[x].score1 == main.rounds[y].matches[x].score2){
-                        draw++;
-                   
-                      }
-           
+					} else if (main.rounds[a].matches[b].score1 == main.rounds[a].matches[b].score2) {
+						draw++;
 
-                    } 
+					}
+
+
+				} else if (main.rounds[a].matches[b].team2.code == main.code1) {
+
+					main.name1 = main.rounds[a].matches[b].team2.name;
+
+					matchesPlayed++;
+					score += main.rounds[a].matches[b].score2;
+
+
+					if (main.rounds[a].matches[b].score1 > main.rounds[a].matches[b].score2) {
+						loss++;
+
+					} else if (main.rounds[a].matches[b].score1 < main.rounds[a].matches[b].score2) {
+						wins++;
+
+					} else if (main.rounds[a].matches[b].score1 == main.rounds[a].matches[b].score2) {
+						draw++;
+
+					}
+
+
+				}
                     main.matches=matchesPlayed;
                     main.wins=wins;
                     main.loss=loss;
                     main.draw=draw;
+                    main.score=score;
                 
                
             }

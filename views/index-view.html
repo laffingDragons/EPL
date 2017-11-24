@@ -13,24 +13,39 @@
 <!-- Adding Filters-->
 <div class="container">
     <div class="row">
-   <div class="col-md-6 col-sm-12">
-			  <div class="t2">
-               <label for="date" > Search Date </label>
- 				<input type="text" name="date" class="form-control" id= "date" placeholder="yyyy-mm-dd" ng-model="searchTeam.date"><hr/>
-                <label for="team1" > Search Team1 </label>
- 				<input type="text" name="team" class="form-control" id="team1" placeholder="Enter name" ng-model="searchTeam.team1.name">
-                
-       </div>
+   <div class="col-sm-12 col-md-6 ">
+      <div class="t2">
+       <label for="date" > Search Date </label>
+        <input type="text" name="date" style="background-color: #442260; color: white;" class="form-control" id= "date" placeholder="yyyy-mm-dd" ng-model="searchTeam.date"><hr/>
+        <label for="team1" > Search Team1 </label>
+        <input type="text" name="team" style="background-color: #442260; color: white;" class="form-control" id="team1" placeholder="Enter name" ng-model="searchTeam.team1.name"> 
+      </div>
     </div><br/>
 
-   <div class="col-md-6 col-sm-12">
+   <div class="col-sm-12 col-md-6 ">
        <div class="about" >
             <label for="day" > Search Matchday </label>
- 			<input type="text" name="day" class="form-control" id= "day" placeholder="Enter match day" ng-model="matchDay.name" data-placement="right"><hr/>
+ 			<input type="text" name="day" class="form-control" style="background-color: white; color: #442260;" id= "day" placeholder="Enter match day" ng-model="matchDay.name" data-placement="right"><hr/>
             <label for="team2" > Search Team2 </label>
- 			<input type="text" name="team" class="form-control" id="team2" placeholder="Enter name" ng-model="searchTeam.team2.name">      
+ 			<input type="text" name="team" style="background-color: white; color: #442260;" class="form-control" id="team2" placeholder="Enter name" ng-model="searchTeam.team2.name">      
        </div>
     </div>
+        
+<!--Code for filter of Score
+
+<div class="col-sm-12 col-md-6 ">
+       <div class="about" >
+            <label for="day" > Score Search team2 </label>
+ 			<input type="text" name="day" class="form-control" id= "day" placeholder="Enter match day" ng-model="matchDay.score1" data-placement="right"><hr/>      
+       </div>
+    </div>
+    <div class="col-sm-12 col-md-6 ">
+       <div class="about" >
+            <label for="day" > Score Search team2 </label>
+ 			<input type="text" name="day" class="form-control" id= "day" placeholder="Enter match day" ng-model="matchDay.socre2" data-placement="right"><hr/>
+                 
+       </div>
+    </div> --->
     </div>
 </div><br/><br/><br/><hr/>
 
@@ -63,7 +78,7 @@
 <!--Divider-->
 <div class="container-fluid">
         <div class="row">
-         <div style="background-color:#442260 " id="2016">
+         <div style="background-color:#442260 ">
          <img class="img-responsive center-block" src="images/logo/logo.jpg" align="middle">
              <h2 class="text-center white">2016-17</h2> 
             </div>   
