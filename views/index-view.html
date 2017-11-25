@@ -72,8 +72,8 @@
 								</div>
 								<!--UI for 2016-17 match--->
 								<div class="container">
-									<div ng-repeat ="data in epl.rounds16">
-										<div ng-repeat ="teams in data.matches">
+									<div ng-repeat ="data in epl.rounds16 | filter:matchDay">
+										<div ng-repeat ="teams in data.matches | filter:searchTeam">
 											<a ng-href="#/match/{{ teams.team1.code }}/{{ teams.team2.code }}/{{ teams.date }}">
 												<div class="row">
 													<div class="col-md-6 col-sm-12">
